@@ -1,0 +1,13 @@
+#+title: README
+
+* How to start
+
+** prepare
+- docker
+- blender 4.2 and bvtknodes
+
+** procedure
+#+begin_src sh
+  git clone this repo
+  docker compose up -d
+#+end_src
