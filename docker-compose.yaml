@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    open-webui:
+        image: ghcr.io/open-webui/open-webui:mains
+        container_name: open-webui
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./graphrag:/app/graphrag
+            - ./connect:/app/connect
+        restart: always
