@@ -5,9 +5,38 @@
 ** prepare
 - docker
 - blender 4.2 and bvtknodes
+- ollama
 
 ** procedure
 #+begin_src sh
   git clone this repo
   docker compose up -d
 #+end_src
+
+
+* Work flow
+
+the core of this project is blender, open-webui and graphrag.
+
+use docker to set up open-webui.
+then you need to import two functions:
+- pipe: communicate with graphrag
+- actions: extract the JSON from conversation
+
+before you start you need to setup ollama and graphrag.
+choose the model and embeddings model you want.
+
+set up the blender, import bvtknodes and json-autoload add-on.
+your request is sent to graphrag, here which use ollama as LLM,
+provide your database then import the setting.yaml. 
+in the setting yaml, the way to call ollama is different in docker.
+
+finally you can ask the question, then press down the action button, preview in the blender.
+
+* Roadmap
+
+- [ ] add how to set up blender and bvtknodes.
+- [ ] make a setting.yaml for docker
+- [ ] can git transfer the uv environment or not?
+- [ ] point out the path should be rewrite or provide an .env
+  
