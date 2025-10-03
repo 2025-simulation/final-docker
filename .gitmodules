@@ -1,6 +1,0 @@
-[submodule "connect"]
-	path = connect
-	url = git@github.com:2025-simulation/connect.git
-[submodule "graphrag"]
-	path = graphrag
-	url = git@github.com:2025-simulation/graphrag.git
