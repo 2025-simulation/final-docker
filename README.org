@@ -9,7 +9,7 @@
 
 ** procedure
 #+begin_src sh
-  git clone this repo
+  git clone --recursive this repo
   docker compose up -d
 #+end_src
 
@@ -35,7 +35,7 @@ finally you can ask the question, then press down the action button, preview in 
 
 * Roadmap
 
-- [ ] add the uv env set up to docker. 
+- [ ] add the uv env set up to docker. uv or conda or raw python
 - [ ] add how to set up blender and bvtknodes.
 - [ ] make a setting.yaml for docker
 - [ ] can git transfer the uv environment or not?
