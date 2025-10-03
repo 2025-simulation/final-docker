@@ -35,6 +35,7 @@ finally you can ask the question, then press down the action button, preview in 
 
 * Roadmap
 
+- [ ] add the uv env set up to docker. 
 - [ ] add how to set up blender and bvtknodes.
 - [ ] make a setting.yaml for docker
 - [ ] can git transfer the uv environment or not?
