@@ -4,10 +4,14 @@
 
 ** prepare
 - docker
-- blender 4.2 and bvtknodes
+- blender 4.2 and bvtknodes, follow the installation tips [[https://github.com/2025-simulation/bvtknode][here]]
 - ollama
 
+
 ** procedure
+install this [[file:connect/bvtk-bridge/new-addon.py][add-on]] in blender
+
+
 #+begin_src sh
   git clone --recursive this repo
   docker compose up -d
@@ -37,7 +41,6 @@ finally you can ask the question, then press down the action button, preview in 
 
 - [ ] add the uv env set up to docker. uv or conda or raw python
 - [ ] add how to set up blender and bvtknodes.
-- [ ] make a setting.yaml for docker
-- [ ] can git transfer the uv environment or not?
+- [x] make a setting.yaml for docker
 - [ ] point out the path should be rewrite or provide an .env
   
