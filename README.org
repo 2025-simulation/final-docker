@@ -39,7 +39,13 @@ open-webui 的网址可以在 [[http://localhost:8080]] 访问
 导入后需要如下图手动启用函数。
 [[file:statics/enable-function.png]]
 
+*** GraphRAG
 
+参照 [[https://microsoft.github.io/graphrag/get_started/][官方的教程]] 初始化数据库。
+
+open-webui 里面默认使用的数据库为 ragtest。
+
+使用其他的大模型，在数据库里面的 ~setting.yaml~ 里面更换就可以了。
 * Work flow
 
 the core of this project is blender, open-webui and graphrag.
@@ -65,10 +71,9 @@ finally you can ask the question, then press down the action button, preview in 
   - [X] 导出 open-webui 的 function 的 JSON
   - [X] 如何导入
   - [X] 如何开启
-- [ ] add the tutorial to setup the functions, especially the actions.
-- [ ] add how to set up blender and bvtknodes.
+- [X] 调整 open-webui 的 function 的描述，同时导出 JSON
+- [X] add how to set up blender and bvtknodes.
 - [X] make a setting.yaml for docker
-- [ ] point out the path should be rewrite or provide an .env
 - [X] docker 中 python 虚拟环境的配置
   1. 拉取镜像的时候会不会同步 python 的虚拟环境。
      *不会*
@@ -84,5 +89,6 @@ finally you can ask the question, then press down the action button, preview in 
      不行，graphrag 实际上只支持 pip 安装
   4. graphrag 推荐的是 3.12 的 python
   5. 最后决定使用 uv pip 来安装，维护 requirement 就可以了。
+- [X] 如何更换大模型的教程
 - [ ] 最后制作一个网站演示
-- [ ] 调整 open-webui 的 function 的描述，同时导出 JSON
+- [ ] 进行最后的测试
