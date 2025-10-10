@@ -9,4 +9,4 @@ services:
             - ./graphrag:/app/graphrag
             - ./connect:/app/connect
         restart: always
-        command: ["/bin/bash", "/app/connect/start-up.sh"]
+        command: ["bash", "-c", "/app/graphrag/setup.sh"]

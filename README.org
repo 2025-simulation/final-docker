@@ -42,5 +42,20 @@ finally you can ask the question, then press down the action button, preview in 
 - [ ] add the uv env set up to docker. uv or conda or raw python
 - [ ] add how to set up blender and bvtknodes.
 - [x] make a setting.yaml for docker
+- [ ] add the tutorial to setup the functions, especially the actions.
 - [ ] point out the path should be rewrite or provide an .env
-  
+- [X] docker 中 python 虚拟环境的配置
+  1. 拉取镜像的时候会不会同步 python 的虚拟环境。
+     *不会*
+  2. 现在 docker 里面的 graphrag 是通过 conda 还是 uv 启动的虚拟环境
+     大概率是 uv，还需要测试
+  3. 如何使用 uv 配置虚拟环境
+     保存 pyproject.toml and uv.lock
+     #+begin_src sh
+       apt update
+       apt install uv
+       uv venv
+     #+end_src
+     不行，graphrag 实际上只支持 pip 安装
+  4. graphrag 推荐的是 3.12 的 python
+  5. 最后决定使用 uv pip 来安装，维护 requirement 就可以了。
