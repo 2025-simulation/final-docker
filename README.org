@@ -4,22 +4,31 @@
 
 ** prepare
 - docker
-- blender 4.2 and bvtknodes, follow the installation tips [[https://github.com/2025-simulation/bvtknode][here]]
+- blender 4.2 and bvtknodes, 参照 [[https://github.com/2025-simulation/bvtknode][这个文章]] 安装 BVTKNodes 插件
 - ollama。拉取两个大模型 llama3:latest, nomic-embed-text
   #+begin_src sh
     ollama pull llama3:latest nomic-embed-text
   #+end_src
 
 ** procedure
+*** 部署项目
 #+begin_src sh
   git clone --recursive this repo
   docker compose up -d
 #+end_src
 
-install this [[file:connect/bvtk-bridge/new-addon.py][add-on]] in blender
-里面 python 脚本的地址要和项目地址保存一致。
+open-webui 的网址可以在 [[http://localhost:8080]] 访问
 
-open-webui 需要导入 function
+*** blender 插件安装
+
+安装 [[file:connect/docker-version/bvtk-json-autoload.py][这个插件]] 之前，需要先根据项目部署的路径调整函数,
+将下面的变量修改为相应的项目部署的实际地址。（Windows 的项目地址可能需要使用 \\ 作为路径分隔符）
+#+begin_src python
+  PROJECT_ROOT = os.path.expanduser("~/Developments/simulation/connect")
+#+end_src
+
+参照上面的教程在 blender 安装。
+
 *** open-webui functions 设置
 如下在 open-webui 中添加需要的函数。
 [[file:statics/add-function-1.png]]
