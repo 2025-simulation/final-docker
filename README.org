@@ -39,7 +39,6 @@ finally you can ask the question, then press down the action button, preview in 
 
 * Roadmap
 
-- [ ] add the uv env set up to docker. uv or conda or raw python
 - [ ] add how to set up blender and bvtknodes.
 - [x] make a setting.yaml for docker
 - [ ] add the tutorial to setup the functions, especially the actions.
