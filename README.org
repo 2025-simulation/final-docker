@@ -5,17 +5,30 @@
 ** prepare
 - docker
 - blender 4.2 and bvtknodes, follow the installation tips [[https://github.com/2025-simulation/bvtknode][here]]
-- ollama
-
+- ollama。拉取两个大模型 llama3:latest, nomic-embed-text
+  #+begin_src sh
+    ollama pull llama3:latest nomic-embed-text
+  #+end_src
 
 ** procedure
-install this [[file:connect/bvtk-bridge/new-addon.py][add-on]] in blender
-
-
 #+begin_src sh
   git clone --recursive this repo
   docker compose up -d
 #+end_src
+
+install this [[file:connect/bvtk-bridge/new-addon.py][add-on]] in blender
+里面 python 脚本的地址要和项目地址保存一致。
+
+open-webui 需要导入 function
+*** open-webui functions 设置
+如下在 open-webui 中添加需要的函数。
+[[file:statics/add-function-1.png]]
+[[file:statics/add-function-2.png]]
+选择[[file:connect/docker-version/open-webui-functions.json][这个 JSON 文件]]，可以一键导入两个所需的函数。
+
+
+导入后需要如下图手动启用函数。
+[[file:statics/enable-function.png]]
 
 
 * Work flow
@@ -39,9 +52,13 @@ finally you can ask the question, then press down the action button, preview in 
 
 * Roadmap
 
-- [ ] add how to set up blender and bvtknodes.
-- [x] make a setting.yaml for docker
+- [X] open-webui
+  - [X] 导出 open-webui 的 function 的 JSON
+  - [X] 如何导入
+  - [X] 如何开启
 - [ ] add the tutorial to setup the functions, especially the actions.
+- [ ] add how to set up blender and bvtknodes.
+- [X] make a setting.yaml for docker
 - [ ] point out the path should be rewrite or provide an .env
 - [X] docker 中 python 虚拟环境的配置
   1. 拉取镜像的时候会不会同步 python 的虚拟环境。
@@ -58,3 +75,5 @@ finally you can ask the question, then press down the action button, preview in 
      不行，graphrag 实际上只支持 pip 安装
   4. graphrag 推荐的是 3.12 的 python
   5. 最后决定使用 uv pip 来安装，维护 requirement 就可以了。
+- [ ] 最后制作一个网站演示
+- [ ] 调整 open-webui 的 function 的描述，同时导出 JSON
