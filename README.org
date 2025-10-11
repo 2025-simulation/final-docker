@@ -14,6 +14,7 @@
 *** 部署项目
 #+begin_src sh
   git clone --recursive this repo
+  cd final-docker
   docker compose up -d
 #+end_src
 
@@ -95,6 +96,6 @@ finally you can ask the question, then press down the action button, preview in 
   1. 复习部署的流程，看看教程是否有所遗漏。
   2. 选用 ollama 最强的大模型，尽量参考最好的效果
      什么是最强的大模型
-     qwen3:30b
+     qwen3:30b/qwen3:235b
      qwen3-embedding:latest
 - [ ] 数据库的文本检查
