@@ -92,3 +92,9 @@ finally you can ask the question, then press down the action button, preview in 
 - [X] 如何更换大模型的教程
 - [ ] 最后制作一个网站演示
 - [ ] 进行最后的测试
+  1. 复习部署的流程，看看教程是否有所遗漏。
+  2. 选用 ollama 最强的大模型，尽量参考最好的效果
+     什么是最强的大模型
+     qwen3:30b
+     qwen3-embedding:latest
+- [ ] 数据库的文本检查
